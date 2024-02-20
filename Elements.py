@@ -1,16 +1,6 @@
 import re
 import sympy
 import pandas as pd
-import colorama
-from termcolor import colored
-
-# Initialize colorama for cross - platform ANSI color support
-colorama.init()
-
-# ANSI escape codes for colors
-GREEN = '\033[32m'
-RED_ON_WHITE = '\033[107;31m'
-RESET = '\033[0m'
 
 file_path = "/Users/koharuhato/Documents/AnswerList.py"
 with open(file_path, 'r') as file:
@@ -42,10 +32,10 @@ for number in range(1,81):
 
         # Check if user answer is correct or not
         if user_answer.upper() == answer.upper():
-            print(GREEN + "Correct +1" + RESET)     # Correct answer
+            print("Correct +1")     # Correct answer
             total_score += 1    # Adds to the total score
         else:
-            print(RED_ON_WHITE + f"Incorrect +0. Correct answer: {answer}" + RESET)     # Incorrect Answer
+            print(f"Incorrect +0. Correct answer: {answer}")     # Incorrect Answer
                 
     # Set answered True after user has answered the question
     answered = True
