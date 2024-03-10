@@ -19,6 +19,8 @@
 </head>
 <body>
 
+git checkout -b Calculator
+
 <button onclick="showCalculator()">Open Calculator</button>
 
 <div id="calculator">
