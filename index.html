@@ -21,6 +21,15 @@ git checkout main
   <a href="#practice" class="w3-button w3-bar-item">Practice</a>
   <a href="#quiz" class="w3-button w3-bar-item">Quiz</a>
   <a href="#elements" class="w3-button w3-bar-item">Elements</a>
+  file_path = "/Users/koharuhato/Documents/Elements.py"
+with open(file_path, 'r') as file:
+    # Read each line in the file
+    lines = file.readlines()
+
+    # Extract the first column (element names)
+    input_elements = [line.split('\t')[0] for line in lines]
+    answer_elements = [line.split('\t')[1].replace("\n", "") for line in lines]
+
   <a href="#other" class="w3-button w3-bar-item">Other</a>
 </nav>
 
