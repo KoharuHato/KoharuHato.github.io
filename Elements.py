@@ -1,3 +1,19 @@
+<!-- Navigation -->
+<nav class="w3-bar w3-cyan">
+    <a href="#index.html" class="w3-button w3-bar-item">Home</a>
+    <a href="#practice.html" class="w3-button w3-bar-item">Practice</a>
+    <a href="#quiz.html" class="w3-button w3-bar-item">Quiz</a>
+    <a href="#Elements.py" class="w3-button w3-bar-item">Elements</a>
+    <a href="calculator.html" class="w3-button w3-bar-item">Calculator</a>
+    <a href="flipclock.html" class="w3-button w3-bar-item">FlipClock</a>
+</nav>
+
+<!-- Title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+
 import re
 import sympy
 import pandas as pd
