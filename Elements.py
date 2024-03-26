@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="w3-bar w3-cyan">
+<nav class="w3-bar w3-grey">
     <a href="#index.html" class="w3-button w3-bar-item">Home</a>
     <a href="#practice.html" class="w3-button w3-bar-item">Practice</a>
     <a href="#productivity.html" class="w3-button w3-bar-item">Productivity</a>
