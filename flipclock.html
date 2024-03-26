@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  <title>Flip Clock</title>
+  <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+  <div class = "flip-clock">
+    <div class = "digit">0</div>
+    <div class = "digit">0</div>
+    <div class = "digit">:</div>
+    <div class = "digit">0</div>
+    <div class = "digit">0</div>
+  </div>
+  <script src = "script.js"></script>
+</body>
+</html>
 
+.flip-clock {
+  display: inline-block;
+font-size: 2em;
+}
+
+.digit {
+  display: inline-block;
+width: 40px;
+height: 60px;
+line-height: 60px;
+text-align: center;
+border: 1px solid #ccc;
+margin-right: 5px;
+}
+
+function updateClock() {
+  var currentTimer = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTimer.getSeconds();
+
+  document.querySelectorAll('.digit')[0].innerText = Math.floor(hours / 10);
+  document.querySelectorAll('.digit')[1].innerText = hours % 10;
+  document.querySelectorAll('.digit')[3].innerText = Math.floor(minutes / 10);
+  document.querySelectorAll('.digit')[4].innerText = minutes % 10;
+  document.querySelectorAll('.digit')[2].innerText = ':';
+  document.querySelectorAll('.digit')[5].innerText = Math.floor(seconds / 10);
+  document.querySelectorAll('.digit')[6].innerText = seconds % 10;
+}
+
+setInterval(updateclock, 1000);
