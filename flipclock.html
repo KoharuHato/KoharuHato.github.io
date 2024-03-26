@@ -49,7 +49,7 @@ function updateClock() {
   var currentTimer = new Date();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
-  var seconds = currentTimer.getSeconds();
+  var seconds = currentTime.getSeconds();
 
   document.querySelectorAll('.digit')[0].innerText = Math.floor(hours / 10);
   document.querySelectorAll('.digit')[1].innerText = hours % 10;
