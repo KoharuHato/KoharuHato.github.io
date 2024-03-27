@@ -11,9 +11,6 @@
             <img src="images/" width="32" height="32">&nbsp;&nbsp;igv.org
         </a>
     </div>
-</body>
-
-</html>
 
 <!-- Navigation -->
 <nav class="w3-bar w3-grey">
@@ -36,7 +33,6 @@
 <!-- Header Countdown -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer Example</title>
@@ -53,8 +49,83 @@
         }
     </style>
 </head>
-<body>
 
+<!-- Side Nav Bar -->
+
+<div class="navbar">
+  <div class="navbar-toggle" onclick="toggleDrawer()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</div>
+
+<div class="drawer">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<script>
+  function toggleDrawer() {
+    var drawer = document.querySelector('.drawer');
+    drawer.classList.toggle('open');
+  }
+</script>
+
+<!-- CSS Hamburger Design -->
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.drawer {
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+.drawer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.drawer a:hover {
+  background-color: #333;
+}
+
+.drawer.open {
+  left: 0;
+}
+    
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
   <a href="#"><i class="fa fa-pinterest-p"></i></a>
@@ -65,3 +136,5 @@
 </footer>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</body>
+</html>
