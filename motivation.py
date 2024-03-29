@@ -23,7 +23,7 @@
     <a href="calculator.html" class="w3-button w3-bar-item">Calculator</a>
     <a href="practice.html" class="w3-button w3-bar-item">Practice</a>
     <a href="productivity.html" class="w3-button w3-bar-item">Productivity</a>
-    <a href="motivation.py" class="w3-button w3-bar-item">Motivation</a>
+    <a href="motivation.html" class="w3-button w3-bar-item">Motivation</a>
     <a href="habits.html" class="w3-button w3-bar-item">Habit Tracker</a>
     <a href="aboutme.html" class="w3-button w3-bar-item">About Me</a>
 </nav>
