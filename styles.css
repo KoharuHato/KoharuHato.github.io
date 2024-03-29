@@ -23,6 +23,7 @@ header, nav, main, footer {
 
 < !-- Styles nav -->
 nav {
+    text-align: center; /* Horizontally center the navigation links */
     border: 1px solid #CB97AB; /* Add border */
     padding: 10px; /* Add padding for spacing */
 }
