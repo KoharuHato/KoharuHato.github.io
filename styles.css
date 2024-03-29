@@ -1,4 +1,4 @@
-/* Apply styles to the container */
+< !-- Styles container -->
 .container {
     max-width: 1000px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
@@ -7,7 +7,7 @@
 }
 
 
-/* Apply styles to the top bar */
+< !-- Styles top bar -->
 .top-bar {
     background-color: #333; /* Set background color */
     height: 10px; /* Set height of the bar */
@@ -15,28 +15,27 @@
 }
 
 
-< !-- Styles to header, nav, main, footer -->
-/* Apply styles to header, nav, main, and footer */
+< !-- Styles header, nav, main, footer -->
 header, nav, main, footer {
     margin-bottom: 20px; /* Add spacing between sections */
 }
 
 
-/* Apply styles to navigation */
+< !-- Styles nav -->
 nav {
     border: 1px solid #CB97AB; /* Add border */
     padding: 10px; /* Add padding for spacing */
 }
 
 
-/* Apply styles to navigation links */
+< !-- Styles nav links -->
 nav a {
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Set link color */
 }
 
 
-/* Apply styles to individual sections */
+< !-- Styles individual sections -->
 section {
     margin-bottom: 20px;
     background-color: #F5F0F6;
