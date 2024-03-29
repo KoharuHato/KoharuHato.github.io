@@ -13,6 +13,10 @@ header, nav, main, footer {
 
 /* Apply styles to individual sections */
 section {
-    border: 1px solid #ccc; /* Add a border to each section */
-    padding: 10px; /* Add padding inside each section */
+    margin-bottom: 20px;
+    background-color: #F5F0F6;
+    border: 1px solid #CB97AB; /* Add a border to each section */
+    padding: 20px; /* Add padding inside each section */
+    width: 100%; /* Make the box span full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
