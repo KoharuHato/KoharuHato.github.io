@@ -11,6 +11,19 @@ header, nav, main, footer {
     margin-bottom: 20px; /* Add spacing between sections */
 }
 
+/* Apply styles to navigation */
+nav {
+    border: 1px solid #CB97AB; /* Add border */
+    padding: 10px; /* Add padding for spacing */
+}
+
+/* Apply styles to navigation links */
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+}
+
+
 /* Apply styles to individual sections */
 section {
     margin-bottom: 20px;
