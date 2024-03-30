@@ -1,4 +1,4 @@
-< !-- Styles Container -->
+/* Styles Container */
 .container {
     max-width: 100px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
@@ -6,37 +6,32 @@
     border: 1px solid #CB97AB; /* Add a border */
 }
 
-
-< !-- Styles Top Bar -->
+/* Styles Top Bar */
 .top-bar {
     background-color: #333; /* Set background color */
     height: 10px; /* Set height of the bar */
     width: 100%; /* Make it span full width */
 }
 
-
-< !-- Styles Header / Nav / Main / Footer -->
+/* Styles Header / Nav / Main / Footer */
 header, nav, main, footer {
     margin-bottom: 20px; /* Add spacing between sections */
 }
 
-
-< !-- Styles Nav -->
+/* Styles Nav */
 nav {
     text-align: center; /* Horizontally center the navigation links */
     border: 1px solid #CB97AB; /* Add border */
     padding: 10px; /* Add padding for spacing */
 }
 
-
-< !-- Styles Nav Links -->
+/* Styles Nav Links */
 nav a {
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Set link color */
 }
 
-
-< !-- Styles Individual Sections -->
+/* Styles Individual Sections */
 section {
     margin-bottom: 20px;
     background-color: #F5F0F6;
@@ -46,8 +41,7 @@ section {
     box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
-
-< !-- Horizontal Line Across Screen -->
+/* Horizontal Line Across Screen */
 .horizontal-line {
     border: 0; /* Remove default border */
     height: 1px; /* Set the height of the line */
@@ -55,8 +49,7 @@ section {
     margin: 20px 0; /* Adjust margin as needed */
 }
 
-
-< !-- Make Larger Icons -->
+/* Make Larger Icons */
 .larger {
     font-size: 24px; /* Adjust the font size as needed */
 }
