@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Announcement Header -->
-        <header class="announcement-header">
-            <div class="announcement-text">
-                <p>Important Announcement: Our website is undergoing maintenance. We apologize for any inconvenience</p>
-            </div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="w3-bar" style="background-color: #E5CEDA;">
-            <a href="index.html" class="w3-button w3-bar-item">Home</a>
-            <a href="calculator.html" class="w3-button w3-bar-item">Calculator</a>
-            <a href="practice.html" class="w3-button w3-bar-item">Practice</a>
-            <a href="productivity.html" class="w3-button w3-bar-item">Productivity</a>
-            <a href="motivation.py" class="w3-button w3-bar-item">Motivation</a>
-            <a href="habits.html" class="w3-button w3-bar-item">Habit Tracker</a>
-            <a href="aboutme.html" class="w3-button w3-bar-item">About Me</a>
-            <a href="tictactoe.html" class="w3-button w3-bar-item">Tic Tac Toe</a>
-        </nav>
-
-      
-<!-- Tic Tac Toe Game Content -->
 class TicTacToe:
     def __init__(self):
         self.board = [' '] * 9
@@ -64,8 +33,3 @@ class TicTacToe:
             if self.board[line[0]] == self.board[line[1]] == self.board[line[2]] != ' ':
                 return True
         return False
-
-        </div>
-    </div>
-</body>
-</html>
