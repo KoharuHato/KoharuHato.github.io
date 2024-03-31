@@ -74,3 +74,30 @@ body {
     opacity: 0.9; /* Set opacity to overlay the background pattern */
 }
 
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
