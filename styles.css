@@ -29,6 +29,13 @@ nav {
 nav a {
     text-decoration: none; /* Remove underline from links */
     color: #333; /* Set link color */
+    padding: 0 10px; /* Add padding to space out the links */
+    border-right: 1px solid #CB97AB; /* Add vertical line to the right of each link */
+}
+
+/* Remove border from the last navigation link */
+nav a:last-child {
+    border-right: none;
 }
 
 /* Styles Individual Sections */
