@@ -67,3 +67,10 @@ body {
     background-repeat: repeat; /* Repeat the pattern */
     /* You can adjust other properties as needed */
 }
+
+/* Container Background / Opacity (to overlay og background) */
+.container {
+    background-color: white; /* Set a solid background color */
+    opacity: 0.9; /* Set opacity to overlay the background pattern */
+}
+
