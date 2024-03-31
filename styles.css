@@ -60,3 +60,10 @@ section {
 .larger {
     font-size: 24px; /* Adjust the font size as needed */
 }
+
+/* Background Image */
+body {
+    background-image: url('path/to/your/background-pattern.jpg'); /* Specify the path to your background pattern image */
+    background-repeat: repeat; /* Repeat the pattern */
+    /* You can adjust other properties as needed */
+}
