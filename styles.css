@@ -1,5 +1,5 @@
-/* Styles Container */
-.container {
+/* Main Container */
+.main-container {
     max-width: 900px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding around the container */
