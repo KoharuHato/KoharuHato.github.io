@@ -1,0 +1,14 @@
+mkdir practice
+cd practice
+touch AnswerList.py app.py
+mkdir templates static
+cd templates
+touch index.html quiz.html flashcards.html matching.html
+cd ../static
+mkdir css js img
+cd css
+touch styles.css flashcards.css matching.css
+cd ../js
+touch script.js flashcards.js matching.js
+cd ../img
+touch logo.png
