@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practice Quiz</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Announcement Header -->
+    <header class="announcement-header">
+      <div class="announcement-text">
+        <p></p>
+      </div>
+    </header>
 
+    <!-- Navigation -->
+    <nav class="w3-bar" style="background-color: #E5CEDA;">
+    <a href="index.html" class="w3-button w3-bar-item">Home</a>
+    <a href="flashcards.html" class="w3-button w3-bar-item">Flashcards</a>
+    <a href="quiz.html" class="w3-button w3-bar-item">Practice Quiz</a>
+    </nav>
+
+    <!-- Title -->
+    <h1>Practice Quiz</h1>
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+# Read questions and answers from the AnswerList.py file
+file_path = "AnswerList.py"
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+    input_elements = [line.split('\t')[0] for line in lines]
+    answer_elements = [line.split('\t')[1].replace("\n", "") for line in lines]
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/quiz', methods=['GET', 'POST'])
+def quiz():
+    if request.method == 'POST':
+        user_answers = {element: request.form[element] for element in input_elements}
+        
+        total_score = 0
+        for element, answer in zip(input_elements, answer_elements):
+            if user_answers.get(element, "").upper() == answer.upper():
+                total_score += 1
+
+        percentage = (total_score / len(input_elements)) * 100
+
+        return render_template('quiz_result.html', total_score=total_score, percentage=percentage)
+    else:
+        return render_template('quiz.html', input_elements=input_elements)
+
+if __name__ == '__main__':
+    app.run(debug=True)
