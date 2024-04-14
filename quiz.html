@@ -26,37 +26,80 @@
 
     <!-- Title -->
     <h1>Practice Quiz</h1>
+<!DOCTYPE python>
+<html lang = "en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<!-- Link to your CSS file -->
+<link rel="stylesheet" href="styles.css">
 
-from flask import Flask, render_template, request
+<!-- Navigation -->
+<nav class="w3-bar w3-grey">
+    <a href="index.html" class="w3-button w3-bar-item">Home</a>
+    <a href="practice.html" class="w3-button w3-bar-item">Practice</a>
+    <a href="productivity.html" class="w3-button w3-bar-item">Productivity</a>
+    <a href="motivation.py" class="w3-button w3-bar-item">Motivation</a>
+    <a href="habits.html" class="w3-button w3-bar-item">Habit Tracker</a>
+    <a href="aboutme.html" class="w3-button w3-bar-item">About Me</a>
+</nav>
 
-app = Flask(__name__)
+<!-- Title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
 
-# Read questions and answers from the AnswerList.py file
-file_path = "AnswerList.py"
+import re
+import sympy
+import pandas as pd
+
+file_path = "/Users/koharuhato/Documents/AnswerList.py"
 with open(file_path, 'r') as file:
+    # Read each line in the file
     lines = file.readlines()
+
+    # Extract the first column (element names)
     input_elements = [line.split('\t')[0] for line in lines]
     answer_elements = [line.split('\t')[1].replace("\n", "") for line in lines]
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# Greetings
+name = input("What is your name: ")
+ready = input("Are you ready to take The Periodic Table Quiz? ")
+print("Get ready, theres 80 questions . . .")
 
-@app.route('/quiz', methods=['GET', 'POST'])
-def quiz():
-    if request.method == 'POST':
-        user_answers = {element: request.form[element] for element in input_elements}
-        
-        total_score = 0
-        for element, answer in zip(input_elements, answer_elements):
-            if user_answers.get(element, "").upper() == answer.upper():
-                total_score += 1
+# Start Score
+total_score = 0
 
-        percentage = (total_score / len(input_elements)) * 100
+# Question Number
+for number in range(1,81):
+    print("Question #" + str(number))
 
-        return render_template('quiz_result.html', total_score=total_score, percentage=percentage)
-    else:
-        return render_template('quiz.html', input_elements=input_elements)
+    # Start answered variable
+    answered = False
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    for element, answer in zip(input_elements, answer_elements):
+        #Get user input for answer
+        user_answer = input(f"{element}: ")
+
+        # Check if user answer is correct or not
+        if user_answer.upper() == answer.upper():
+            print("Correct +1")     # Correct answer
+            total_score += 1    # Adds to the total score
+        else:
+            print(f"Incorrect +0. Correct answer: {answer}")     # Incorrect Answer
+                
+    # Set answered True after user has answered the question
+    answered = True
+
+    # Print final score after each set of questions
+    print("Total Score:", total_score)
+    a = float(80)
+    b = float(total_score)
+    percentage = b / a * 100
+    print("Your percentage is:", percentage, "%")
+
+# End of the quiz
+print("Congratulations, " + name + "you have completed the quiz!")
+print("Final Total Score:", total_score)
+input("Press Enter to continue . . .")
