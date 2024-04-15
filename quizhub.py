@@ -63,3 +63,5 @@ for number in range(0, 18):
 # End of quiz
 print("Press Enter to continue . . . ")
 
+if __name__ == '__main__':
+    app.run(debug=True)
