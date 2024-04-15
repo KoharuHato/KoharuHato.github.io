@@ -6,7 +6,7 @@ import re
 import sympy
 import pandas as pd
 
-file_path = "/Users/koharuhato/Documents/QuizletImport.py"
+file_path = "https://github.com/KoharuHato/KoharuHato.github.io/blob/ccc98424cd9a998cc32b50de27626bd3fe38922c/QuizletImport.py"
 with open(file_path, 'r') as file:
     # Read each line in the file
     lines = file.readlines()
