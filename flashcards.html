@@ -28,7 +28,7 @@
         .outer-card:hover .inner-card {
             transform: rotateY(180deg);
         }
-        .font-face, .back-face {
+        .font-face {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -36,14 +36,17 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            /* Remove rotation for the front face */
+            transform: rotateY(0deg);
         }
-        .font-face {
-            color: black;
+        .font-face h2 {
+            margin: 0; /* Remove default margin */
         }
         .back-face {
             color: black;
             transform: rotateY(180deg);
         }
+        
         /* Custom colors for each flashcard */
         .card1 .font-face, .card1 .back-face { background-color: lightblue; }
         .card2 .font-face, .card2 .back-face { background-color: lightblue; }
