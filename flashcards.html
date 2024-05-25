@@ -28,266 +28,257 @@
         .outer-card:hover .inner-card {
             transform: rotateY(180deg);
         }
-        .font-face {
+        .front-face, .back-face {
             position: absolute;
             width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            /* Remove rotation for the front face */
-            transform: rotateY(0deg);
-        }
-        .font-face h2 {
-            margin: 0; /* Remove default margin */
+            backface-visibility: hidden;
         }
         .back-face {
-            color: black;
             transform: rotateY(180deg);
         }
-        
+        .font-face h2 {
+            margin: 0;
+        }
+
         /* Custom colors for each flashcard */
-        .card1 .font-face, .card1 .back-face { background-color: lightblue; }
-        .card2 .font-face, .card2 .back-face { background-color: lightblue; }
-        .card3 .font-face, .card3 .back-face { background-color: lavender; }
-        .card4 .font-face, .card4 .back-face { background-color: lavender; }
-        .card5 .font-face, .card5 .back-face { background-color: lightcoral; }
-        .card6 .font-face, .card6 .back-face { background-color: lightcoral; }
-        .card7 .font-face, .card7 .back-face { background-color: lightcoral; }
-        .card8 .font-face, .card8 .back-face { background-color: lightcoral; }
-        .card9 .font-face, .card9 .back-face { background-color: lightgoldenrodyellow; }
-        .card10 .font-face, .card10 .back-face { background-color: lightgoldenrodyellow; }
-        .card11 .font-face, .card11 .back-face { background-color: lightgoldenrodyellow; }
-        .card12 .font-face, .card12 .back-face { background-color: lightgoldenrodyellow; }
-        .card13 .font-face, .card13 .back-face { background-color: lightgoldenrodyellow; }
-        .card14 .font-face, .card14 .back-face { background-color: lightgoldenrodyellow; }
-        .card15 .font-face, .card15 .back-face { background-color: lightgoldenrodyellow; }
-        .card16 .font-face, .card16 .back-face { background-color: lightgoldenrodyellow; }
-        .card17 .font-face, .card17 .back-face { background-color: lightgoldenrodyellow; }
-        .card18 .font-face, .card18 .back-face { background-color: lightgoldenrodyellow; }
-        
-        /* Add more classes for additional cards as needed */
+        .card1 .front-face, .card1 .back-face { background-color: lightblue; }
+        .card2 .front-face, .card2 .back-face { background-color: lightblue; }
+        .card3 .front-face, .card3 .back-face { background-color: lavender; }
+        .card4 .front-face, .card4 .back-face { background-color: lavender; }
+        .card5 .front-face, .card5 .back-face { background-color: lightcoral; }
+        .card6 .front-face, .card6 .back-face { background-color: lightcoral; }
+        .card7 .front-face, .card7 .back-face { background-color: lightcoral; }
+        .card8 .front-face, .card8 .back-face { background-color: lightcoral; }
+        .card9 .front-face, .card9 .back-face { background-color: lightgoldenrodyellow; }
+        .card10 .front-face, .card10 .back-face { background-color: lightgoldenrodyellow; }
+        .card11 .front-face, .card11 .back-face { background-color: lightgoldenrodyellow; }
+        .card12 .front-face, .card12 .back-face { background-color: lightgoldenrodyellow; }
+        .card13 .front-face, .card13 .back-face { background-color: lightgoldenrodyellow; }
+        .card14 .front-face, .card14 .back-face { background-color: lightgoldenrodyellow; }
+        .card15 .front-face, .card15 .back-face { background-color: lightgoldenrodyellow; }
+        .card16 .front-face, .card16 .back-face { background-color: lightgoldenrodyellow; }
+        .card17 .front-face, .card17 .back-face { background-color: lightgoldenrodyellow; }
+        .card18 .front-face, .card18 .back-face { background-color: lightgoldenrodyellow; }
     </style>
 </head>
 <body>
-<!-- Flashcard Container 1 -->
-<div class="outer-card card1">
-    <div class="inner-card">
-        <div class="font-face">
-            <h2>Ammonium</h2>
-        </div>
-        <div class="back-face">
-            <h2>NH<span class="superscript">4</span><sup>+</sup></h2>
+    <!-- Flashcard Container 1 -->
+    <div class="outer-card card1">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Ammonium</h2>
+            </div>
+            <div class="back-face">
+                <h2>NH<span class="superscript">4</span><sup>+</sup></h2>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Flashcard Container 2 -->
-<div class="outer-card card2">
-    <div class="inner-card">
-        <div class="font-face">
-            <h2>Hydronium</h2>
-        </div>
-        <div class="back-face">
-            <h2>H<span class="subscript">3</span>O<span class="superscript">+</span></h2>
+    <!-- Flashcard Container 2 -->
+    <div class="outer-card card2">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Hydronium</h2>
+            </div>
+            <div class="back-face">
+                <h2>H<span class="subscript">3</span>O<span class="superscript">+</span></h2>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Flashcard Container 3 -->
-<div class="outer-card card3">
-    <div class="inner-card">
-        <div class="font-face">
-            <h2>Phosphite</h2>
-        </div>
-        <div class="back-face">
-            <h2>PO<span class="subscript">3</span><sup>-3</sup></h2>
+    <!-- Flashcard Container 3 -->
+    <div class="outer-card card3">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Phosphite</h2>
+            </div>
+            <div class="back-face">
+                <h2>PO<span class="subscript">3</span><sup>-3</sup></h2>
+            </div>
         </div>
     </div>
-</div>
 
-        <!-- Flashcard Container 4 -->
-        <div class="outer-card card4">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Phosphate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>PO<span class="subscript">4</span>O<sup>-3</sup></h2>
-                </div>
+    <!-- Flashcard Container 4 -->
+    <div class="outer-card card4">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Phosphate</h2>
+            </div>
+            <div class="back-face">
+                <h2>PO<span class="subscript">4</span>O<sup>-3</sup></h2>
             </div>
         </div>
-        
-        <!-- Flashcard Container 5 -->
-        <div class="outer-card card5">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Chromate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>CRO<span class="subscript">4</span>2<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 6-->
-        <div class="outer-card card6">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Carbonate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>CO<span class="subscript">3</span>2<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 7 -->
-        <div class="outer-card card7">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Sulfate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>SO<span class="subscript">4</span>2<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 8 -->
-        <div class="outer-card card8">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Sulfite</h2>
-                </div>
-                <div class="back-face">
-                    <h2>SO<span class="subscript">2</span>2<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 9 -->
-        <div class="outer-card card9">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Acetate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>C2H3O<span class="subscript">2</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 10 -->
-        <div class="outer-card card10">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Bicarbonate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>HCO<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 11 -->
-        <div class="outer-card card11">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Hydroxide</h2>
-                </div>
-                <div class="back-face">
-                    <h2>OH<span class="subscript"></span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 12 -->
-        <div class="outer-card card12">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Chlorate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 13 -->
-        <div class="outer-card card13">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Chlorite</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 14 -->
-        <div class="outer-card card14">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Nitrate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 15 -->
-        <div class="outer-card card15">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Nitrite</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>        
-        
-        <!-- Flashcard Container 16 -->
-        <div class="outer-card card16">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Permanganate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 17 -->
-        <div class="outer-card card17">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Perchlorate</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-                
-        <!-- Flashcard Container 18 -->
-        <div class="outer-card card18">
-            <div class="inner-card">
-                <div class="font-face">
-                    <h2>Hypochlorite</h2>
-                </div>
-                <div class="back-face">
-                    <h2>H<span class="subscript">3</span>1<sup>-</sup></h2>
-                </div>
-            </div>
-        </div>
-        <!-- Add more flashcard containers with unique classes for additional cards -->
     </div>
+
+    <!-- Flashcard Container 5 -->
+    <div class="outer-card card5">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Chromate</h2>
+            </div>
+            <div class="back-face">
+                <h2>CrO<span class="subscript">4</span>2<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 6 -->
+    <div class="outer-card card6">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Carbonate</h2>
+            </div>
+            <div class="back-face">
+                <h2>CO<span class="subscript">3</span>2<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 7 -->
+    <div class="outer-card card7">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Sulfate</h2>
+            </div>
+            <div class="back-face">
+                <h2>SO<span class="subscript">4</span>2<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 8 -->
+    <div class="outer-card card8">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Sulfite</h2>
+            </div>
+            <div class="back-face">
+                <h2>SO<span class="subscript">3</span>2<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 9 -->
+    <div class="outer-card card9">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Acetate</h2>
+            </div>
+            <div class="back-face">
+                <h2>C<sub>2</sub>H<sub>3</sub>O<sub>2</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 10 -->
+    <div class="outer-card card10">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Bicarbonate</h2>
+            </div>
+            <div class="back-face">
+                <h2>HCO<sub>3</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 11 -->
+    <div class="outer-card card11">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Hydroxide</h2>
+            </div>
+            <div class="back-face">
+                <h2>OH<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 12 -->
+    <div class="outer-card card12">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Chlorate</h2>
+            </div>
+            <div class="back-face">
+                <h2>ClO<sub>3</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 13 -->
+    <div class="outer-card card13">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Chlorite</h2>
+            </div>
+            <div class="back-face">
+                <h2>ClO<sub>2</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 14 -->
+    <div class="outer-card card14">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Nitrate</h2>
+            </div>
+            <div class="back-face">
+                <h2>NO<sub>3</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 15 -->
+    <div class="outer-card card15">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Nitrite</h2>
+            </div>
+            <div class="back-face">
+                <h2>NO<sub>2</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 16 -->
+    <div class="outer-card card16">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Permanganate</h2>
+            </div>
+            <div class="back-face">
+                <h2>MnO<sub>4</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 17 -->
+    <div class="outer-card card17">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Perchlorate</h2>
+            </div>
+            <div class="back-face">
+                <h2>ClO<sub>4</sub><sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flashcard Container 18 -->
+    <div class="outer-card card18">
+        <div class="inner-card">
+            <div class="front-face">
+                <h2>Hypochlorite</h2>
+            </div>
+            <div class="back-face">
+                <h2>ClO<sup>-</sup></h2>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
-
