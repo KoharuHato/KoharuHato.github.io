@@ -2,66 +2,94 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-import re
-import sympy
-import pandas as pd
+const fs = require('fs');
+const readline = require('readline');
 
-file_path = "https://github.com/KoharuHato/KoharuHato.github.io/blob/ccc98424cd9a998cc32b50de27626bd3fe38922c/QuizletImport.py"
-with open(file_path, 'r') as file:
-    # Read each line in the file
-    lines = file.readlines()
+const filePath = '/Users/koharuhato/Documents/QuizletImport.py';
+let inputElements = [];
+let answerElements = [];
 
-    # Extract the first column
-    input_elements = [line.split('\t')[0] for line in lines]
-    answer_elements = [line.split('\t')[1].replace("\n", "") for line in lines]
+const readFile = async () => {
+  const file = await fs.promises.readFile(filePath, 'utf8');
+  const lines = file.split('\n');
 
+  for (const line of lines) {
+    const [input, answer] = line.split('\t');
+    inputElements.push(input);
+    answerElements.push(answer.replace('\n', ''));
+  }
+};
 
-#for i in range(0, len(input_elements)):
-#    print(input_elements[i])
-#
-#
-#for i in range(0, len(answer_elements)):
-#    print(answer_elements[i])
-    
+const askName = () => {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
 
-# Greetings
-name = input("Enter your name: ")
-ready = input("Are you ready to take this quiz? ")
-print("Get ready, theres 18 questions . . . ")
+    rl.question('Enter your name: ', (name) => {
+      rl.close();
+      resolve(name);
+    });
+  });
+};
 
-# Start Score
-total_score = 0
+const askReadiness = () => {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
 
-# Question Number
-for number in range(0, 18):
-    print("Question #" + str(number))
+    rl.question('Are you ready to take this quiz? ', (ready) => {
+      rl.close();
+      resolve(ready);
+    });
+  });
+};
 
-    # Start answered variable
-    answered = False
+const runQuiz = async () => {
+  await readFile();
+  const name = await askName();
+  const ready = await askReadiness();
 
-    for element, answer in zip(input_elements, answer_elements):
-        # Get uesr input for answer
-        user_answer = input(f"{element}: ")
+  console.log('Get ready, there\'s 18 questions . . .');
 
-        # Check if user answer is correct or not
-        if user_answer.upper() == answer.upper():
-                print("Correct +1", answer)
-                total_score += 1 # Adds to total score
-        else:
-            print("Incorrect +0", answer)
+  let totalScore = 0;
 
-    # Set answered True after user has answered the question
-    answered = True
+  for (let number = 0; number < 18; number++) {
+    console.log(`Question #${number}`);
+    let answered = false;
 
-    # Print final score after each set of questions
-    print("Total Score:", total_score)
-    a = float(80)
-    b = float(total_score)
-    percentage = b / a * 100
-    print("Your final percentage is:", percentage, "%")
+    for (let i = 0; i < inputElements.length; i++) {
+      const userAnswer = await new Promise((resolve) => {
+        const rl = readline.createInterface({
+          input: process.stdin,
+          output: process.stdout
+        });
 
-# End of quiz
-print("Press Enter to continue . . . ")
+        rl.question(`${inputElements[i]}: `, (answer) => {
+          rl.close();
+          resolve(answer);
+        });
+      });
 
-if __name__ == '__main__':
-    app.run(debug=True)
+      if (userAnswer.toUpperCase() === answerElements[i].toUpperCase()) {
+        console.log('Correct +1', answerElements[i]);
+        totalScore++;
+      } else {
+        console.log('Incorrect +0', answerElements[i]);
+      }
+    }
+
+    answered = true;
+    console.log('Total Score:', totalScore);
+    const percentage = (totalScore / 80) * 100;
+    console.log('Your final percentage is:', percentage.toFixed(2), '%');
+  }
+
+  console.log('Press Enter to continue . . .');
+};
+
+runQuiz();
+
