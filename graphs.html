@@ -35,10 +35,15 @@
         </div>
         
     <div class="graph">
-import seaborn as sns
-<import matplotlib.pyplot as plt>
-<sns.scatterplot(x = 'Days', y = 'Amount of minutes studied', data = car_data)>
-    </sns.scatterplot>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        const myChart = new Chart("Study Bar Chart", {
+  type: "bar",
+  data: {},
+  options: {}
+});
     </div>
 </body>
 </html>
