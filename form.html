@@ -7,6 +7,7 @@
     <input type = "password" name = "password" size = "15"
       maxlength = "30" />
   </p>
+  
   <form action = "http://www.example.com/comments.php">
     <p>What did you think about this website?</p>
     <textarea name = "comments" cols = "20" rows = "4">Enter your comments...</textarea>
@@ -20,6 +21,7 @@
       <input type = "radio" name = "part" value = "motivation"
         checked = "checked" /> motivation
     </p>
+    
   <form action = "http://www.example.com/profile.php">
     <p>Please select your least favorite part(s) about this website:
       <br />
@@ -30,6 +32,7 @@
       <input type = "checkbox" name = "service"
         value = "motivation" /> Motivation
     </p>
+    
   <form action = "http://www.example.com/profile.php">
     <p>What device are you currently looking at this website on?</p>
     <select name = "devices">
@@ -37,6 +40,7 @@
       <option value = "iphone">iPhone</option>
       <option value = "tablet/ipad">Tablet / iPad</option>
     </select>
+    
   <form action = "http://www.example.com/profile.php">
     <p>Do you use any of the following apps?
     (You can select more than one option by holding down control on a PC or command key on a Mac)</p>
@@ -47,21 +51,34 @@
       <option value = "instagram">Instagram</option>
       <option value = "snapchat">Snapchat</option>
     </select>
+    
   <form action = "http://www.example.com/upload.php"
     method = "post">
     <p>Upload your song in MP3 format:</p>
     <input type = "file" name = "user-song" /><br />
     <input type = "submit" value = "Upload" />
   </form>
+    
   <form action = "http://www.example.com/subscribe.php">
     <p>Subscribe to our email list:</p>
     <input type = "text" name = "email" />
     <input type = "submit" name = "subscribe"
       value = "Subscribe" />
+    
   <form action = "http://www.exmple.com/add.php">
     <button><img src = "images / add.gif" alt = "add"
       width = "10" height = "10" /> Add</button>
     <input type = "hidden" name = "bookmark"
       value = "lyrics" />
   </form>
+
+  <label>Age: <input type = "text" name = "age" /></label>
+  <br/ >
+  Gender:
+  <input id = "female" type = "radio" name = "gender"
+    value = "f">
+  <label for = "female">Female</label>
+  <input id = "male" type = "radio" name = "gender"
+    value = "m">
+  <label for "male">Male</label>
 </form>
