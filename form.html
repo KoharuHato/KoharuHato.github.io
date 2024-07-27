@@ -7,10 +7,13 @@
     <input type = "password" name = "password" size = "15"
       maxlength = "30" />
   </p>
-  
+
+#################################################### TEXT INPUT
   <form action = "http://www.example.com/comments.php">
     <p>What did you think about this website?</p>
     <textarea name = "comments" cols = "20" rows = "4">Enter your comments...</textarea>
+
+#################################################### RADIO BUTTON (ONLY 1 CHOICE)
   <form action = "http://www.example.com/profile.php">
     <p>Please select your favorite part about this website:
       <br />
@@ -21,7 +24,8 @@
       <input type = "radio" name = "part" value = "motivation"
         checked = "checked" /> motivation
     </p>
-    
+
+#################################################### MULTIPLE SELECT CHECKBOX
   <form action = "http://www.example.com/profile.php">
     <p>Please select your least favorite part(s) about this website:
       <br />
@@ -32,7 +36,8 @@
       <input type = "checkbox" name = "service"
         value = "motivation" /> Motivation
     </p>
-    
+
+#################################################### DROP DOWN LIST BOX
   <form action = "http://www.example.com/profile.php">
     <p>What device are you currently looking at this website on?</p>
     <select name = "devices">
@@ -40,7 +45,8 @@
       <option value = "iphone">iPhone</option>
       <option value = "tablet/ipad">Tablet / iPad</option>
     </select>
-    
+
+#################################################### MULTIPLE SELECT BOX
   <form action = "http://www.example.com/profile.php">
     <p>Do you use any of the following apps?
     (You can select more than one option by holding down control on a PC or command key on a Mac)</p>
@@ -51,20 +57,23 @@
       <option value = "instagram">Instagram</option>
       <option value = "snapchat">Snapchat</option>
     </select>
-    
+
+#################################################### FILE INPUT BOX
   <form action = "http://www.example.com/upload.php"
     method = "post">
     <p>Upload your song in MP3 format:</p>
     <input type = "file" name = "user-song" /><br />
     <input type = "submit" value = "Upload" />
   </form>
-    
+
+#################################################### SUBMIT BUTTON (SUBSCRIBE)
   <form action = "http://www.example.com/subscribe.php">
     <p>Subscribe to our email list:</p>
     <input type = "text" name = "email" />
     <input type = "submit" name = "subscribe"
       value = "Subscribe" />
-    
+
+#################################################### BUTTON AND HIDDEN CONTROLS
   <form action = "http://www.exmple.com/add.php">
     <button><img src = "images / add.gif" alt = "add"
       width = "10" height = "10" /> Add</button>
@@ -72,6 +81,7 @@
       value = "lyrics" />
   </form>
 
+#################################################### LABELLING FORM CONTROLS
   <label>Age: <input type = "text" name = "age" /></label>
   <br/ >
   Gender:
@@ -82,6 +92,7 @@
     value = "m">
   <label for "male">Male</label>
 
+#################################################### GROUPING FORM ELEMENTS
   <fieldset>
     <legend>Contact details</legend>
     <label>Email:<br />
@@ -91,4 +102,17 @@
     <label>telephone:<br />
     <input type = "text" name = "telephone" /></label><br />
   </fieldset>
+
+#################################################### FORM VALIDATION (Will show users if they havent filled the required elements)
+  <form action = "http://www.example.com/login/"
+    method = "post">
+  <label for = "username">Username:</label>
+  <input type = "text" name = "username"
+    required = "required" /></title><br />
+  <label for = "password">Password:</label>
+  <input type = "password" name = "password"
+    required = "required" />
+  <input type = "sumbit" value = "Sumbit" />
+
+#################################################### RADIO BUTTON (ONLY 1 CHOICE)
 </form>
