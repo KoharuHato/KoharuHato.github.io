@@ -1,5 +1,5 @@
 <!-- Greet User -->
-print("hello! if you need any help with mat
+print("hello! talk to me if you have any questions or easy math problems!")
 def greet user():
   greeting_pattern = re.compile(r'hello+|hi+|hey+', re.IGNORECASE)
   name = input("What is your name?: ")
@@ -14,7 +14,3 @@ def greet user():
         return False
 
 <!-- Math -->
-
-
-<!-- Translator -->
-
