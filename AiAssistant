@@ -1,0 +1,14 @@
+<!-- Greet User -->
+print("hello! if you need any help with mat
+def greet user():
+  greeting_pattern = re.compile(r'hello+|hi+|hey+', re.IGNORECASE)
+  name = input("What is your name?: ")
+  user_input = input("You:
+    if greeting_pattern.match(user_input):
+        print("Chatbot: Hey, how can I assist you today?")
+        return True
+    elif user_input.lower() == "exit":
+        print("Chatbot: Bye!")
+        return False
+    else:
+        return False
