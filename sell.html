@@ -4,36 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>The Store</h1>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">My Online Store</h1>
+        </div>
     </header>
-    <main>
-        <section class="products">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>$10.00</p>
-                <button>Add to Cart</button>
+    <main class="container mx-auto my-8">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img src="product1.jpg" alt="Product 1" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-xl font-semibold mt-4">Product 1</h2>
+                <p class="text-gray-700 mt-2">$10.00</p>
+                <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300">Add to Cart</button>
             </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h2>Product 1</h2>
-                <p>$10.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h2>Product 1</h2>
-                <p>$10.00</p>
-                <button>Add to Cart</button>
-            </div>
+            <!-- Repeat for other products -->
         </section>
     </main>
-    <footer>
+    <footer class="bg-gray-800 text-white py-4 text-center">
         <p>&copy; 2024 My Online Store</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
