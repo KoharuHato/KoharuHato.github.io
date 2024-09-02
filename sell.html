@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Artwork Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <table>
-    <tr>
-      <td><img src="images/rhodes.jpg" width="200" height="150" alt="Fender Rhodes" /></td>
-      <td class="description">This piece of artwork is made by (blank) . . .</td>
-      <td>$10</td>
-    </tr>
-  </table>
+    <header>
+        <h1>My Online Store</h1>
+    </header>
+    <main>
+        <section class="products">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 1</h2>
+                <p>$10.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat for other products -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
 </body>
 </html>
-
-
-/* General table styles */
-table {
-  border-collapse: collapse;
-  width: 100%; /* Makes the table full width */
-  margin: 20px 0; /* Adds some margin above and below the table */
-}
-
-/* Styles for table cells */
-td {
-  border: 1px solid #ddd; /* Light gray border for table cells */
-  padding: 10px; /* Adds padding inside each table cell */
-  vertical-align: top; /* Aligns cell content to the top */
-}
-
-/* Specific styles for the description cell */
-.description {
-  min-width: 450px;
-  max-width: 650px;
-  text-align: left;
-  padding: 5px; /* Padding inside the description cell */
-}
