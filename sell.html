@@ -1,35 +1,10 @@
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-<tr>
-  <td><img src = "images/rhodes.jpg" width = "200"
-        height = "150" alt = "Fender Rhodes" /></td>
-  <td class = "description">This piece of artwork is made by (blank) . . . </td>
-  <td>$10</td>
-</tr>
-
-.description {
-  min-width: 450px;
-  max-width: 650px;
-  text-align: left;
-  padding: 5px;
-  margin: 0;
-}
-
-table {
-  border-collapse: collapse; /* Ensures no extra spacing between cells */
-}
-
-td {
-  border: 1px solid #ddd; /* Optional: to see cell boundaries */
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>Table with Description</title>
 </head>
 <body>
   <table>
@@ -41,3 +16,24 @@ td {
   </table>
 </body>
 </html>
+
+/* General table styles */
+table {
+  border-collapse: collapse;
+  width: 100%; /* Makes the table full width */
+  margin: 20px 0; /* Adds some margin above and below the table */
+}
+
+td {
+  border: 1px solid #ddd; /* Light gray border for table cells */
+  padding: 10px; /* Adds padding inside each table cell */
+  vertical-align: top; /* Aligns cell content to the top */
+}
+
+/* Specific styles for the description cell */
+.description {
+  min-width: 450px;
+  max-width: 650px;
+  text-align: left;
+  padding: 5px; /* Padding inside the description cell */
+}
