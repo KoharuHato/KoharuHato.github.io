@@ -1,3 +1,31 @@
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        // Adding a custom pink color
+        'custom-pink': '#FF007F', // Replace this with your desired hex color code
+        // Or define a custom shade of pink with varying shades
+        pink: {
+          100: '#FFEBF0', // Lightest shade
+          200: '#FFB3C6',
+          300: '#FF80A2',
+          400: '#FF4D80',
+          500: '#FF007F', // Your custom pink color
+          600: '#E6006D',
+          700: '#CC005C',
+          800: '#B3004C',
+          900: '#99003D', // Darkest shade
+        },
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+};
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
