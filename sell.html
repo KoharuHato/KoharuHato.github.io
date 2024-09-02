@@ -32,6 +32,17 @@
             <!-- Products will be inserted here dynamically -->
         </section>
     </main>
+    <div id="cart-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+            <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+            <ul id="cart-items" class="mb-4">
+                <!-- Cart items will be inserted here -->
+            </ul>
+            <button id="checkout-button" class="bg-pink-500 text-white px-4 py-2 rounded">Checkout</button>
+            <button id="close-cart" class="mt-4 bg-gray-500 text-white px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
     
     
 <body class="bg-gray-100 font-sans">
