@@ -164,27 +164,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <!-- SEARCH BAR IN SHOP -->
-document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('search-input');
-    const productList = document.getElementById('product-list');
+const products = [
+  { name: 'Product 1', description: 'Description of Product 1' },
+  { name: 'Product 2', description: 'Description of Product 2' },
+  // Add more products as needed
+];
 
-    // Function to filter products based on search query
-    function filterProducts(query) {
-        const products = Array.from(productList.children);
-
-        products.forEach(product => {
-            const productName = product.querySelector('h2').textContent.toLowerCase();
-            if (productName.includes(query.toLowerCase())) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
-
-    // Event listener for the search input
-    searchInput.addEventListener('input', (event) => {
-        const query = event.target.value;
-        filterProducts(query);
-    });
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const results = products.filter(product =>
+    product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)
+  );
+  
+  displayResults(results);
 });
+
+function displayResults(results) {
+  // Clear previous results
+  const resultsContainer = document.getElementById('resultsContainer');
+  resultsContainer.innerHTML = '';
+
+  // Display new results
+  results.forEach(product => {
+    const productElement = document.createElement('div');
+    productElement.textContent = `${product.name}: ${product.description}`;
+    resultsContainer.appendChild(productElement);
+  });
+}
