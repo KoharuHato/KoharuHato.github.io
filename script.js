@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- SEARCH BAR IN SHOP -->
 const products = [
-  { name: 'Product 1', description: 'Description of Product 1' },
+  { name: 'Cookie', description: 'Description of Product 1' },
   { name: 'Product 2', description: 'Description of Product 2' },
   // Add more products as needed
 ];
