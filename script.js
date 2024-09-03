@@ -161,3 +161,30 @@ document.addEventListener('DOMContentLoaded', () => {
         cartModal.classList.add('hidden');
     });
 });
+
+
+<!-- SEARCH BAR IN SHOP -->
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const productList = document.getElementById('product-list');
+
+    // Function to filter products based on search query
+    function filterProducts(query) {
+        const products = Array.from(productList.children);
+
+        products.forEach(product => {
+            const productName = product.querySelector('h2').textContent.toLowerCase();
+            if (productName.includes(query.toLowerCase())) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    // Event listener for the search input
+    searchInput.addEventListener('input', (event) => {
+        const query = event.target.value;
+        filterProducts(query);
+    });
+});
