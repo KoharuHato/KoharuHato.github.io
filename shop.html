@@ -18,41 +18,37 @@
         </div>
     </header>
 
-<!-- Searchbar -->
-<form id="searchForm">
-  <input type="text" id="searchInput" placeholder="Search products..." />
-  <button type="submit">Search</button>
-<div id="resultsContainer"></div>
-</form>
+    <!-- Searchbar -->
+    <form id="searchForm" class="flex items-center my-4 container mx-auto">
+        <input type="text" id="searchInput" placeholder="Search products..." class="border rounded-l px-4 py-2 w-full">
+        <button type="submit" class="bg-pink-600 text-white px-4 py-2 rounded-r">Search</button>
+    </form>
 
-
-<!-- Products -->
+    <!-- Products -->
     <main class="container mx-auto my-8">
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-list">
             <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="product1.jpg" alt="Cookie" class="w-full h-48 object-cover rounded-lg">
-                <h2 class="text-xl font-semibold mt-4">Product 1</h2>
-                <img src="product1.jpg" alt="Product 1" class="w-full h-48 object-cover rounded-lg">
-                <h2 class="text-xl font-semibold mt-4">Cookie</h2>
+                <img src="cookie.jpeg" alt="Delicious Cookie" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-xl font-semibold mt-4">Delicious Cookie</h2>
                 <p class="text-gray-700 mt-2">$10.00</p>
                 <button class="mt-4 px-4 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition-colors duration-300">Add to Cart</button>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="boba.jpeg" alt="Product 2" class="w-full h-48 object-cover rounded-lg">
-                <h2 class="text-xl font-semibold mt-4">Product 2</h2>
+                <img src="boba.jpeg" alt="Tasty Boba Drink" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-xl font-semibold mt-4">Tasty Boba Drink</h2>
                 <p class="text-gray-700 mt-2">$15.00</p>
                 <button class="mt-4 px-4 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition-colors duration-300">Add to Cart</button>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img src="cookie.jpeg" alt="Product 3" class="w-full h-48 object-cover rounded-lg">
-                <h2 class="text-xl font-semibold mt-4">Product 3</h2>
+                <img src="cookie.jpeg" alt="Delicious Cookie" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-xl font-semibold mt-4">Delicious Cookie</h2>
                 <p class="text-gray-700 mt-2">$20.00</p>
                 <button class="mt-4 px-4 py-2 bg-pink-600 text-white rounded hover:bg-pink-700 transition-colors duration-300">Add to Cart</button>
             </div>
         </section>
     </main>
-    
-    
+
+    <!-- Cart Modal -->
     <div id="cart-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
             <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
