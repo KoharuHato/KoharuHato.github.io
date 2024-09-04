@@ -147,8 +147,8 @@ body {
 
 /* Styles for Shopping Cart Logo */
 .cart-logo {
-    width: 10px; /* Adjust the size of the logo */
-    height: auto; /* Maintain the aspect ratio */
+    width: 1px; /* Adjust the size of the logo */
+    height: 1px; /* Maintain the aspect ratio */
     margin-right: 8px; /* Space between the logo and text */
 }
 
