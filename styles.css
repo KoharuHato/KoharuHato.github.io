@@ -118,6 +118,20 @@ body {
     margin: 0 auto; /* Center the modal */
 }
 
+
+.add-to-cart {
+    cursor: pointer;
+    background-color: #CB97AB; /* Or another color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #a87f78; /* Slightly darker shade */
+}
 /* Button styles */
 .add-to-cart {
     cursor: pointer;
