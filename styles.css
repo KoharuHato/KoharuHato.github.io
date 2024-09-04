@@ -136,3 +136,25 @@ body {
 .add-to-cart {
     cursor: pointer;
 }
+
+!-- SHOPPING CART LOGO -->
+<
+/* Styles for Shopping Cart Container */
+#shopping-cart {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+}
+
+/* Styles for Shopping Cart Logo */
+.cart-logo {
+    width: 24px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 8px; /* Space between the logo and text */
+}
+
+/* Styles for Shopping Cart Text */
+.cart-text {
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Adjust color if needed */
+}
+
