@@ -1,16 +1,64 @@
-<!-- Greet User -->
-print("hello! talk to me if you have any questions or easy math problems!")
-def greet user():
-  greeting_pattern = re.compile(r'hello+|hi+|hey+', re.IGNORECASE)
-  name = input("What is your name?: ")
-  user_input = input("You:
+import re
+import sympy
+
+
+def process_math_query(query):
+    try:
+        result = sympy.sympify(query)
+        return str(result)
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+def execute_code(code):
+    try:
+        exec_globals = {}
+        exec(code, exec_globals)
+        return "Code executed successfully."
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+def analyze_code(code):
+    # Tokenize and tag parts of speech in the code (example: check for the 'function' keyword)
+    if 'function' in code.lower():
+        return "It looks like you're defining a function. Is there anything specific you need help with?"
+    else:
+        return "I'm not sure how to assist with this code. Can you provide more details or ask a specific question?"
+
+def greet_user():
+    greeting_pattern = re.compile(r'hello+|hi+|hey+', re.IGNORECASE)
+    user_input = input("You: ")
+
     if greeting_pattern.match(user_input):
-        print("Chatbot: Hey, how can I assist you today?")
+        print("Chatbot: Hi there! I'm your personal chatbot. How can I assist you today?")
         return True
     elif user_input.lower() == "exit":
-        print("Chatbot: Bye!")
+        print("Chatbot: Goodbye!")
         return False
     else:
         return False
 
-<!-- Math -->
+def chatbot():
+    greeting_received = greet_user()
+
+    while greeting_received:
+        user_input = input("You: ").lower()
+
+        if user_input == "exit":
+            print("Chatbot: Goodbye!")
+            break
+
+        if "math" in user_input:
+            math_query = input("Enter a math expression: ")
+            response = process_math_query(math_query)
+        elif "programming" in user_input:
+            programming_code = input("Enter programming code: ")
+            response = analyze_code(programming_code)
+        elif any(thank_you in user_input for thank_you in ["thank you", "thanks", "thankyou", "thank u", "ty", "tysm"]):
+            response = "You're welcome! If you have more questions, feel free to ask."
+        else:
+            response = "Please select: | math | translate |"
+
+        print("Chatbot:", response)
+
+# Start the chatbot
+chatbot()
